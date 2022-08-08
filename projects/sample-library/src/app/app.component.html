@@ -1,0 +1,8 @@
+<div class="container">
+    <header><h2>Login Form</h2></header>
+      <section>
+          <lib-dynamic-form [formData]="formData" (invokeEvent)="triggerEvent($event)"></lib-dynamic-form>
+      </section>
+      <footer> <p>Copyright &copy; Library 2021</p></footer>
+</div>
+<router-outlet></router-outlet>

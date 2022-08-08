@@ -1,0 +1,125 @@
+{
+    "version":"1.0",
+    "views":
+        {
+            "commonHeader": "",
+            "sections": [
+                {
+                    "sectionId":"1",
+                    "sectionName":"Sample",
+                    "sectionClass":"",
+                    "controls":[
+                        {
+                            "control":"input",
+                            "id":"fname",
+                            "name":"fname",
+                            "value":"",
+                            "controlShow": true,
+                            "clearControl": true,
+                            "pattern": "[A-Za-z]{3}",
+                            "type": "text",
+                            "onKeyUp":"onKeyUpMethod",
+                            "onKeyDown":"onKeyDownMethod",
+                            "onKeyPress":"onKeyPressMethod",
+                            "onblur":"onBlurMethod",
+                            "label":"Enter your Name",
+                            "placeholder": "Enter your name",
+                            "required": true,
+                            "errorMsg": [
+                                {"required": "Enter Name"},
+                                {"pattern": "Pattern not matching"}
+                            ]
+                        },
+                        {
+                            "control":"radio",
+                            "id":"gender",
+                            "name":"gender",
+                            "value":"",
+                            "controlShow": true,
+                            "type": "text",
+                            "methodName":"radioSelected",
+                            "label":"Select Gender",
+                            "required": true,
+                            "options": [{ "displayName": "Male", "value": "M"}, { "displayName": "FeMale", "value": "F" }],
+                            "errorMsg": [
+                                {"required": "Select Gender"}
+                            ]
+                        },
+                        {
+                            "control":"checkbox",
+                            "id":"occupation",
+                            "name":"occupation",
+                            "value":"",
+                            "controlShow": true,
+                            "type": "single",
+                            "label":"check if you have job?",
+                            "methodName":"checkBoxChecked",
+                            "required": true,
+                            "errorMsg": [
+                                {"required": "Select occupation"}
+                            ]
+                        },
+                        {
+                            "control":"dropdown",
+                            "id":"country",
+                            "name":"country",
+                            "value":"",
+                            "controlShow": true,
+                            "type": "multiple",
+                            "label":"Select Country",
+                            "required": true,
+                            "options": [{ "displayName": "U.S.A", "value": "USA", "selected": true},{ "displayName": "U.A.E", "value": "UAE"}, { "displayName": "UK", "value": "UK" }, { "displayName": "Germany", "value": "Germany" }],
+                            "errorMsg": [
+                                {"required": "Select Country"}
+                            ]
+                        },
+                        {
+                            "control":"date",
+                            "id":"dob",
+                            "name":"dob",
+                            "value":"",
+                            "controlShow": true,
+                            "clearControl": true,
+                            "type": "year",
+                            "methodName":"dateSelected",
+                            "format":"dd-MMM-yyyy",
+                            "label":"select DOB",
+                            "placeholder": "select DOB",
+                            "required": true,
+                            "errorMsg": [
+                                { "required": "select DOB" }
+                            ]
+                        },
+                        {
+                            "control":"chip",
+                            "id":"countryVisited",
+                            "name":"countryVisited",
+                            "value":[],
+                            "controlShow": true,
+                            "type": "",
+                            "label":"Country visited: ",
+                            "required": true,
+                            "options": [{ "displayName": "U.S.A", "value": "USA", "selected": false},{ "displayName": "U.A.E", "value": "UAE", "selected": false}, { "displayName": "UK", "value": "UK" , "selected": false}, { "displayName": "Germany", "value": "Germany", "selected": false }],
+                            "errorMsg": [
+                                {"required": "Select Country Visited"}
+                            ]
+                        },
+                        {
+                            "control":"button",
+                            "formsubmit": true,
+                            "methodName":"validateLogin",
+                            "id":"submit",
+                            "name":"submit",
+                            "value":"Enter",
+                            "controlShow": true,
+                            "type": "",
+                            "label":""
+                        }                      
+                    ]
+
+                }
+            ]
+
+        }
+    
+}
