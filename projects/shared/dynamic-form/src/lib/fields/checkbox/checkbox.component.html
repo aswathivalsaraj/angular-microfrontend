@@ -1,0 +1,4 @@
+<section class="example-section" [formGroup]="group">
+    <mat-checkbox class="example-margin" [formControlName]="field.name" 
+    (change)="checkBoxChecked($event)" [attr.disabled]="field.disabled"> {{ field.label}} </mat-checkbox>
+  </section>

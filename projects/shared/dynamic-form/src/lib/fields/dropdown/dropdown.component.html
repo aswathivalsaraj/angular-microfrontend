@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill"  [formGroup]="group">
+    <mat-label>{{ field.label }}</mat-label>
+      <div *ngIf="field.type === 'select';else other_content">
+        <select matNativeControl [formControlName]="field.name" onchange="valueChanged($event, opt)">
+          <option *ngFor="let opt of field.options" [value]="opt.value">{{opt.displayName}}</option>
+        </select>
+      </div>
+      <ng-template #other_content>
+        <mat-select [formControlName]="field.name" [multiple]="field.type === 'multiple' ? true: false ">
+          <mat-select-trigger>{{ field.options ? field.options[0].displayName : ''}}</mat-select-trigger>
+          <mat-option (click)="dropDownValueChanged($event, opt)" *ngFor="let opt of field.options" [value]="opt.value"> {{opt.displayName}} </mat-option>
+        </mat-select>
+      </ng-template>
+</mat-form-field>

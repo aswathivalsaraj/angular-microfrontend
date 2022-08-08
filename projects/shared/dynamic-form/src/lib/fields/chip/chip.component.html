@@ -1,0 +1,8 @@
+<div [formGroup]="group">
+    <mat-chip-list [formControlName]="field.name" [multiple]="true" [multiple]="true" [selectable]="true">
+      <mat-chip *ngFor="let opt of field.options" #chip="matChip" (click)="opt.selected=!opt.selected; selectViaInteraction()" [selected]="opt.selected" [selectable]="true" class="leadr-category-chip" (selectionChange)="changeSelected($event, opt)">
+        {{opt.displayName}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+  </div>

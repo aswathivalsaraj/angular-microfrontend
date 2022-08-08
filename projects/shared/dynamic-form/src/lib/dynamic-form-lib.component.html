@@ -1,0 +1,17 @@
+<form [formGroup]="utilityService.dynamicForm" #form="ngForm" (ngSubmit)="formSubmitted()">
+    <div class="row">
+        <ng-container *ngFor="let field of fieldControls; index as i">
+            <div [ngClass]="{'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12':field.colLayout == '1',
+            'col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6':field.colLayout == '2',
+            'col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4':field.colLayout == '3',
+            'col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3':field.colLayout == '4',
+            'col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2':field.colLayout == '5',
+            'col-12 col-sm-2 col-md-1 col-lg-1 col-xl-1':field.colLayout == '6',
+            'hide-field':(field.controlShow === false),
+            'inline-field':(field.inlineLabel) }">
+                <span libCustomField [fieldConfig]="field" [group]="utilityService.dynamicForm"></span>
+                <p class="lib-error-msg"></p>
+            </div>
+        </ng-container>
+    </div>
+</form>

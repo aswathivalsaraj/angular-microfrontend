@@ -1,0 +1,9 @@
+.hide-field {
+    visibility: hidden !important;
+    display: none !important;
+}
+.inline-field {
+    display: inline-block !important;
+    width: 100%;
+}
+.lib-error-msg{ color: red;}

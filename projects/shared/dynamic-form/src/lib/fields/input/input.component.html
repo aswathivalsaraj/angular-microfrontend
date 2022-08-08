@@ -1,0 +1,6 @@
+<mat-form-field class="" appearance="fill" [formGroup]="group">               
+  <input matInput [attr.pattern]="field.pattern" [attr.placeholder]="field.placeholder" (blur)="valueEntered($event)" (keypress)="valueEntered($event)" (keydown)="valueEntered($event)" (keyup)="valueEntered($event)" value="" [formControlName]="field.name">
+  <button *ngIf="showClearBtn" matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+      <mat-icon>close</mat-icon>
+  </button>               
+</mat-form-field>
