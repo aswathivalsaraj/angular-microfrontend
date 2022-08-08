@@ -60,17 +60,7 @@ import { DatePipe } from '@angular/common';
     DynamicFormLibComponent
   ],
   providers: [ DatePipe ],
-  schemas:[ CUSTOM_ELEMENTS_SCHEMA],
-  entryComponents: [
-    StaticHtmlComponent,
-    ButtonComponent,
-    CheckboxComponent,
-    ChipComponent,
-    DateComponent,
-    DropdownComponent,
-    FileComponent,
-    InputComponent,
-    RadioComponent
-  ]
+  schemas:[ CUSTOM_ELEMENTS_SCHEMA]
+  
 })
 export class DynamicFormLibModule { }

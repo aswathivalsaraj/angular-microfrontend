@@ -70,7 +70,7 @@ export class EditBookComponent implements OnInit {
             this.router.navigate(['home'])
         });  */
     } else { 
-        formData.id = ((this.bookService.allbooks).length + 1).toString(); 
+     //   formData.id = ((this.bookService.allbooks).length + 1).toString() ; 
         let bookData: any = { newBook: formData, allBooks: this.bookService.allbooks };
         this.bookService.addNewBook(bookData).subscribe((bookDetails: any) => {     
           this.router.navigate(['home'])
