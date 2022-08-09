@@ -4,8 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClient } from '@angular/common/http';
-import { DynamicFormModule } from 'dist/shared/dynamic-form';
+import { HttpClientModule } from '@angular/common/http';
+import { DynamicFormModule } from 'dynamic-form';
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +16,8 @@ import { DynamicFormModule } from 'dist/shared/dynamic-form';
     AppRoutingModule,
     FormsModule, 
     ReactiveFormsModule,
-    DynamicFormModule,   
+    DynamicFormModule,
+    HttpClientModule   
   ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

@@ -15,8 +15,8 @@ import { StaticHtmlComponent } from "../fields/static-html/static-html.component
   selector: '[libCustomField]'
 })
 export class CustomFieldDirective extends FieldConfig implements OnInit {
-  @Input() public fieldConfig: FieldConfig;
-  @Input() public group: FormGroup;
+  @Input() fieldConfig: FieldConfig;
+  @Input() group: FormGroup;
   private componentInstance: any;
   public componentConfig: any = {
     input: InputComponent,
@@ -29,7 +29,7 @@ export class CustomFieldDirective extends FieldConfig implements OnInit {
     button: ButtonComponent,
     static: StaticHtmlComponent
   }
-  constructor(private factoryResolver: ComponentFactoryResolver, private elementRef: ElementRef, private viewContainerRef: ViewContainerRef) {
+  constructor(private elementRef: ElementRef, private viewContainerRef: ViewContainerRef) {
     super();
   }
 
@@ -45,8 +45,7 @@ export class CustomFieldDirective extends FieldConfig implements OnInit {
     const field = this.fieldConfig.control;
     const component = this.componentConfig[field];
     if(field && component) {
-      const compoentFactory  = this.factoryResolver.resolveComponentFactory(component);
-      this.componentInstance = this.viewContainerRef.createComponent(compoentFactory);
+      this.componentInstance = this.viewContainerRef.createComponent(component);
       this.componentInstance.instance.field = this.fieldConfig;
       this.componentInstance.instance.group = this.group;
       const dynamicElement = this.componentInstance.location.nativeElement;

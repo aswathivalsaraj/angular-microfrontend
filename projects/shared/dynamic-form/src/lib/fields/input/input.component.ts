@@ -16,7 +16,8 @@ export class InputComponent extends formConfig implements OnInit {
   public valueEntered(event: any): void {
     this.showClearBtn   =   this.group.get(this.field.name)?.value ? true: false;
     if(this.field && event.type) {
-      this.field.methodName = event.type == "keyup" ? this.field.onKeyUp: (event.type == "keydown" ? this.field.onKeyDown: (event.type == "keypress" ? this.field.onKeyPress: this.field.onblur ))
+      this.field['methodName'] = event.type == "keyup" ? this.field['onKeyUp'] : (event.type == "keydown" ? 
+      this.field['onKeyDown']: (event.type == "keypress" ? this.field['onKeyPress']: this.field['onblur'] ))
       this.utilityService.invokeEvent.next(this.field);
     }
   }
