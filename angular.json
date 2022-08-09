@@ -52,9 +52,13 @@
 							"projects/app-library/src/assets"
 						],
 						"styles": [
-							"projects/app-library/src/styles.css"
+							"projects/app-library/src/styles.css",
+							"node_modules/bootstrap/dist/css/bootstrap.css",
+							"node_modules/font-awesome/css/font-awesome.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"node_modules/bootstrap/dist/js/bootstrap.js"
+						],
 						"extraWebpackConfig": "projects/app-library/webpack.config.js",
 						"commonChunk": false
 					},
@@ -185,9 +189,13 @@
 							"projects/client-interview/src/assets"
 						],
 						"styles": [
-							"projects/client-interview/src/styles.css"
+							"projects/app-library/src/styles.css",
+							"node_modules/bootstrap/dist/css/bootstrap.css",
+							"node_modules/font-awesome/css/font-awesome.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"node_modules/bootstrap/dist/js/bootstrap.js"
+						],
 						"extraWebpackConfig": "projects/client-interview/webpack.config.js",
 						"commonChunk": false
 					},

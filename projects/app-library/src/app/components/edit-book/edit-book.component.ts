@@ -54,7 +54,7 @@ export class EditBookComponent implements OnInit {
   }
  
   public bookUpdate(): void {
-    let formData = this.booksForm.getRawValue();
+    let formData: any = this.booksForm.getRawValue();
     if(Number(this.bookId) > 0) { // This will update existing book
      
         this.alertMessage = (this.bookId <= this.bookService.allbooks.length) ? "": "Book does not exists"; 
@@ -63,14 +63,15 @@ export class EditBookComponent implements OnInit {
              this.router.navigate(['home'])
           });  
 
-         /* 
+         
          
          formData.id = this.bookId.toString(); 
          this.bookService.updateBookDetails(formData).subscribe((bookDetails: any) => {        
             this.router.navigate(['home'])
-        });  */
+        });  
     } else { 
-     //   formData.id = ((this.bookService.allbooks).length + 1).toString() ; 
+        formData.id = ((this.bookService.allbooks).length + 1).toString() ; 
+        console.log(formData);
         let bookData: any = { newBook: formData, allBooks: this.bookService.allbooks };
         this.bookService.addNewBook(bookData).subscribe((bookDetails: any) => {     
           this.router.navigate(['home'])

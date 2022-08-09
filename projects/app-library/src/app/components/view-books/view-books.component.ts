@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './view-books.component.html',
   styleUrls: ['./view-books.component.scss']
 })
-export class ViewBooksComponent implements OnInit , OnChanges{
+export class ViewBooksComponent implements OnInit {
   public booksList: any;
   @Input() public search: boolean = false;
   public apiUrl;
@@ -14,15 +14,10 @@ export class ViewBooksComponent implements OnInit , OnChanges{
     this.bookService.selectedBookId = 0;
     this.apiUrl = this.bookService.apiUrl;
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    throw new Error('Method not implemented.');
-  }
+  
   ngOnInit(): void {
     console.log("On Init 2")
     this.getAllBooks();    
-  }
-  OnChanges(){
-    console.log("On changes 1")
   }
   public getAllBooks() {
     this.bookService.getAllBooks().subscribe((books)=> {     

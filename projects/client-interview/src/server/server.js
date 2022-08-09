@@ -15,4 +15,4 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use('/products', productsRouter);
 app.listen(config.port);
-console.log("Running app on port port. Visit: http://localhost:" + config.port + "/");
+console.log("Running Client interview app on port port. Visit: http://localhost:" + config.port + "/");

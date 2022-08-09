@@ -21,4 +21,4 @@ app.use(bodyParser.json());
 console.log("PORT FROM JSON: ", config.port)
 app.use('/books', booksRouter);
 app.listen(config.port);
-console.log("Running app on port port. Visit: http://localhost:" + config.port + "/");
+console.log("Running app-library on port port. Visit: http://localhost:" + config.port + "/");
