@@ -330,14 +330,14 @@
 						"main": "projects/sample-library/src/main.ts",
 						"polyfills": "projects/sample-library/src/polyfills.ts",
 						"tsConfig": "projects/sample-library/tsconfig.app.json",
-						"assets": [
-							"projects/sample-library/src/favicon.ico",
-							"projects/sample-library/src/assets"
-						],
 						"styles": [
-							"projects/sample-library/src/styles.css"
+							"projects/app-library/src/styles.css",
+							"node_modules/bootstrap/dist/css/bootstrap.css",
+							"node_modules/font-awesome/css/font-awesome.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"node_modules/bootstrap/dist/js/bootstrap.js"
+						],
 						"extraWebpackConfig": "projects/sample-library/webpack.config.js",
 						"commonChunk": false
 					},

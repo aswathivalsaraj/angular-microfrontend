@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"npm run run:all\" \"ng build dynamic-form\"  \"npm run client:server\" \"npm run library:server\"",
+    "start": "concurrently \"npm run run:all\" \"npm run client:server\" \"npm run library:server\"",
     "build": "npm run run:all",
-    "init-server": "ng build dynamic-form",
+    "build:form": "ng build dynamic-form",
     "watch": "ng build --watch --configuration development",
     "client:server": "nodemon projects/client-interview/src/server/server",
     "library:server": "nodemon projects/app-library/src/server/server",
