@@ -10,7 +10,8 @@
     "client:server": "nodemon projects/client-interview/src/server/server",
     "library:server": "nodemon projects/app-library/src/server/server",
     "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
-    "run-apps": "npm run run:all && npm run init-server"
+    "run-apps": "npm run run:all && npm run init-server",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -37,9 +38,17 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.1.1",
+    "@angular-eslint/builder": "13.5.0",
+    "@angular-eslint/eslint-plugin": "13.5.0",
+    "@angular-eslint/eslint-plugin-template": "13.5.0",
+    "@angular-eslint/schematics": "13.5.0",
+    "@angular-eslint/template-parser": "13.5.0",
     "@angular/cli": "~13.3.9",
     "@angular/compiler-cli": "~14.1.1",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "eslint": "^8.17.0",
     "ngx-build-plus": "^14.0.0",
     "typescript": "~4.6.2"
   }

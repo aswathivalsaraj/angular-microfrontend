@@ -10,6 +10,6 @@ export class AppComponent implements OnInit{
  }  
  public title: string = "library-app";
  ngOnInit() {
-
+ console.log("Hiii")
  }
 }

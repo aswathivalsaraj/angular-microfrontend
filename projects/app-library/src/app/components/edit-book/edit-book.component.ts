@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BooksService } from '../../services/books.service';
-import { LoggerService } from '../../logger/logger.service'
+import { LoggerService } from '../../logger/logger.service';
 @Component({
   selector: 'app-edit-book',
   templateUrl: './edit-book.component.html',

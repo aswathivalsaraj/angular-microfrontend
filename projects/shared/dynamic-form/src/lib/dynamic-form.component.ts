@@ -5,7 +5,7 @@ import { FieldConfig } from "./config/field-config";
 @Component({
   selector: 'lib-dynamic-form',
   templateUrl: './dynamic-form.component.html',
-  styles: [ 'p { font-size: 14px; color:red }']
+  styles: [ 'p { font-size: 14px; color:red } label { margin-right: 20px }']
 })
 export class DynamicFormComponent implements OnInit {
 

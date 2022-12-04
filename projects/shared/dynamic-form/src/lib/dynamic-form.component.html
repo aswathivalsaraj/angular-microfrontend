@@ -8,7 +8,7 @@
             'col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2':field.colLayout == '5',
             'col-12 col-sm-2 col-md-1 col-lg-1 col-xl-1':field.colLayout == '6',
             'hide-field':(field.controlShow === false),
-            'inline-field':(field.inlineLabel) }">
+            'inline-field':(field.inlineLabel) }"><label>{{ field.label }}</label> 
                 <span libCustomField [fieldConfig]="field" [group]="utilityService.dynamicForm"></span>
                 <p class="lib-error-msg"></p>
             </div>
