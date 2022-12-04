@@ -4,10 +4,11 @@
             <article class="markdown-body entry-content" itemprop="text">              
                 <app-library-header>
                   <h2 class="text-center">Books Availability</h2>
+                  <button question class="btn btn-primary" [routerLink]="['/addBook']" type="button">
+                    Add new book
+                  </button>
                 </app-library-header>
-                <button class="btn btn-primary mb-2 mt-2 pull-right" [routerLink]="['/addBook']" type="button">
-                  Add new book
-                </button>
+                
                  <div class="accordion" id="accordionExample">            
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
