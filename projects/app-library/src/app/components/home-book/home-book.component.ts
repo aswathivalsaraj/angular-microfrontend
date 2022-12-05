@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Books } from '../../models/books.model';
 import { BooksService } from '../../services/books.service';
 
 @Component({
@@ -14,7 +16,7 @@ export class HomeBookComponent implements OnInit {
   public filteredBooks: any;
   public apiUrl: string;
   public booksForm: FormGroup;
-  constructor(private bookService: BooksService) { 
+  constructor(private bookService: BooksService, private activatedRoute: ActivatedRoute) { 
     this.apiUrl = this.bookService.apiUrl;
     this.booksForm = new FormGroup({
       bookId: new FormControl(''),
@@ -23,16 +25,19 @@ export class HomeBookComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.getAllBooks();
-    console.log("Refresh")
+   // this.getAllBooks();
+    this.activatedRoute.data.subscribe(({ books }) => {
+      this.booksList = books;
+      this.bookService.allbooks = this.booksList;
+    })
   }
 
-  public getAllBooks(): void {
+ /* public getAllBooks(): void {
     this.bookService.getAllBooks().subscribe((books)=> {      
       this.booksList = books;
       this.bookService.allbooks = this.booksList ;
     });
-  }
+  } */
   public getBook(id: number): void {    
     this.bookService.getBook(id).subscribe((book)=> {      
       this.book = book;
